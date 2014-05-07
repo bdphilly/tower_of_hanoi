@@ -13,9 +13,9 @@ Game.prototype.run = function() {
 
 Game.prototype.makeTurn = function(callback) {
   var that = this;
+
   READER.question("What pile from?", function(ans) {
     var from = parseInt(ans);
-
     READER.question("What pile to?", function(ans) {
       var to = parseInt(ans);
 
@@ -48,7 +48,7 @@ Game.prototype.isValidMove = function(from, to) {
   var pileTo = this.stacks[to - 1];
   var discToMove = pileFrom[pileFrom.length - 1];
   return (pileTo.length === 0 || pileTo[pileTo.length - 1] > discToMove );
-};
+}
 
 Game.prototype.checkForWin = function() {
   return (this.stacks[1].length ===  this.totalDiscs ||
@@ -68,8 +68,8 @@ function Game (numDiscs) {
   for (var i = numDiscs; i > 0; i--) {
     pile1.push(i);
   }
-  this.stacks = [pile1, [], []]
-};
+  this.stacks = [pile1, [], []];
+}
 
 game = new Game(3);
 
