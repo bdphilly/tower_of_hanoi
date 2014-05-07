@@ -2,11 +2,11 @@ Game.prototype.run = function() {
   var that = this;
 
   this.makeTurn( function () {
-	  if (that.checkForWin()) {
-		  console.log("Congrats! You won!");
-		  READER.close();
+    if (that.checkForWin()) {
+      console.log("Congrats! You won!");
+      READER.close();
     } else {
-		  that.run();
+      that.run();
     }
   });
 }
