@@ -1,0 +1,55 @@
+#stacks {
+  width: 700px;
+  border: red dashed 3px;
+  margin: 0px auto;
+  padding-left: 100px;
+}
+
+#stacks:after {
+  content: "";
+  clear: both;
+  display: block;
+
+}
+
+body {
+  text-align: center;
+}
+
+.pile {
+  width: 200px;
+  height: 300px;
+  margin: 0px auto;
+  float: center;
+  display: table-cell;
+  border: black solid 1px;
+  vertical-align: bottom;
+}
+
+.highlighted {
+  border: yellow solid 3px;
+}
+
+.disk {
+  margin: 0px auto;
+  display: block;
+
+}
+
+#disk1 {
+  width: 50px;
+  height: 75px;
+  background-color: blue;
+}
+
+#disk2 {
+  width: 100px;
+  height: 75px;
+  background-color: red;
+}
+
+#disk3 {
+  width: 150px;
+  height: 75px;
+  background-color: green;
+}

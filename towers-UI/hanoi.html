@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Tower of Hanoi</title>
+  <link rel="stylesheet" href="hanoi.css" type="text/css" charset="utf-8">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="underscore.js"></script>
+  <script type="text/javascript" src="hanoi.js"></script>
+  <script type="text/javascript" src="hanoi_ui.js"></script>
+
+
+</head>
+
+
+<body>
+  <h1>Play Tower of Hanoi!</h1>
+  <div id="stacks">
+    <script>
+      _.times(3,function(i) {
+        $('#stacks').append(
+          '<div class="pile" id="pile' + i + '" data-pile="' + i + '" </div>')
+      });
+      var game = new window.Hanoi.Game();
+      var towersUI = new window.Hanoi.TowersUI(game);
+    </script>
+  </div>
+
+</body>
+
+</html>
